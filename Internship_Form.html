@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Internship Form</title>
+
+
+    <link rel="stylesheet" href="Internship_Form.css"
+
+</head>
+<body>
+
+<div class="form-box">
+    <h2 align="center">Internship Form</h2>
+
+    <form onsubmit="showPopup(event)">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <select required>
+            <option value="">Select Internship Field</option>
+            <option>Web Development</option>
+            <option>App Development</option>
+            <option>UI/UX Design</option>
+            <option>Data Science</option>
+            <option>Software Developer</option>
+        </select>
+
+        <textarea rows="4" placeholder="Why do you want this internship?" required></textarea>
+
+        <button type="submit">Submit</button>
+        
+        <button type="reset">reset</button>
+    </form>
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+    <div class="popup-box">
+        <h3>Success!</h3>
+        <p>Your form has been submitted.</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script>
+function showPopup(event){
+    event.preventDefault();
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup(){
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
